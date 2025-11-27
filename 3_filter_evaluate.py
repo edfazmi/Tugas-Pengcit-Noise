@@ -7,10 +7,6 @@ from numpy.lib.stride_tricks import as_strided
 os.system("cls")
 
 def get_windows(image, kernel_size):
-    """
-    Fungsi helper untuk sliding window manual (tanpa loop lambat).
-    FIXED: Memperbaiki dimensi view_shape untuk citra berwarna.
-    """
     pad = kernel_size // 2
     
     if len(image.shape) == 3: # === CITRA BERWARNA ===
